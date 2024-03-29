@@ -1,4 +1,4 @@
-    use crate::utils::{echo_function, ls_function};
+    use crate::utils::{cat_function, echo_function, ls_function};
     use std::io;
     use std::io::Error;
 
@@ -27,7 +27,7 @@
                         let ls_param = if list_inputs.len() > 1 {
                             &list_inputs[1]
                         } else {
-                            "../fichier_test/"
+                            "./"
                         };
                         match ls_function(ls_param){
                             Ok(entries) => {
@@ -38,6 +38,24 @@
                             Err(_) => {
                                 println!("Erreur lors de l'affichage du répertoire");
                             }
+                        }
+                    }
+
+                    "cat" => {
+                        if list_inputs.len() > 1 {
+                            let cat_param: Vec<String> = list_inputs[1..].iter().map(|s| s.to_string()).collect();
+                            match cat_function(cat_param) {
+                                Ok(contents) => {
+                                    for content in contents {
+                                        println!("{}", content);
+                                    }
+                                }
+                                Err(_) => {
+                                    println!("Erreur lors de la lecture du fichier");
+                                }
+                            }
+                        } else {
+                            println!("Aucun fichier spécifié pour la commande cat");
                         }
                     }
 

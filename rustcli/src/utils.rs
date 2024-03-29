@@ -1,4 +1,6 @@
 use std::fs;
+use std::fs::{File, Metadata};
+use std::io::Read;
 use std::path::Path;
 
 pub fn echo_function(input: &str){
@@ -32,12 +34,13 @@ pub fn ls_function(input: &str) -> Result<Vec<String>, std::io::Error>{
 
 pub fn cat_function(file_names: Vec<String>) -> Result<Vec<String>, std::io::Error> {
     let mut files_contents = Vec::new();
-        if (file_names) {
-
-
-            Ok(files_contents)
-        } else{
-        Err(std::io::Error::new(std::io::ErrorKind::InvalidInput, "File doesn't exist"))
+    for file_name in &file_names {
+        let mut file_content = String::new();
+        let file_path = Path::new(file_name);
+        let mut file = File::open(file_path)?;
+        file.read_to_string(&mut file_content)?;
+        files_contents.push(file_content);
     }
+    Ok(files_contents)
 }
 
