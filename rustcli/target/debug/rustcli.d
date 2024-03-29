@@ -1,0 +1,1 @@
+C:\Users\oqais\OneDrive\Documents\Code\ Perso\Rust\RustCLI\rustcli\target\debug\rustcli.exe: C:\Users\oqais\OneDrive\Documents\Code\ Perso\Rust\RustCLI\rustcli\src\main.rs C:\Users\oqais\OneDrive\Documents\Code\ Perso\Rust\RustCLI\rustcli\src\utils.rs
