@@ -37,7 +37,7 @@
                                     println!("{}", entry); // On affiche le file
                                 }
                             }
-                            Err(_) => { // Si jamais ça renvoie une erreur
+                            Err(_) => { // Si jamais ça renvoie une erreurech
                                 println!("Erreur lors de l'affichage du répertoire"); // On le précise
                             }
                         }
