@@ -1,4 +1,4 @@
-target
+rustcli/target
+/rustcli/target/debug
 /rustcli/target
-/rustcli/target
-/rustcli/target
+fichier_test
