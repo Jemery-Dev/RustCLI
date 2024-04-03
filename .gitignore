@@ -1,1 +1,4 @@
-/target
+target
+/rustcli/target
+/rustcli/target
+/rustcli/target

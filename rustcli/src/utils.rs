@@ -16,7 +16,7 @@ pub fn echo_function(input: &str){
 }
 
 
-/// Param string
+/// Param string (input)
 /// Return, VecString or Error
 /// Prend un param (ou pas) et renvoie les fichiers du fichier courant
 pub fn ls_function(input: &str) -> Result<Vec<String>, std::io::Error>{
