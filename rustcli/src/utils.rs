@@ -9,7 +9,7 @@ use std::path::Path;
 
 pub fn echo_function(input: &str){
     if input.is_empty() {
-        String::new();
+        let _ = String::new();
     } else {
         println!("{}", input);
     }
